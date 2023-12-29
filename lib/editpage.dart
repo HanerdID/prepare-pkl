@@ -12,11 +12,11 @@ class _EditPageState extends State<EditPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Edit Data'),
+        title: const Text('Edit Data'),
       ),
       body: Form(
         child: Container(
-          padding: EdgeInsets.all(16.0),
+          padding: const EdgeInsets.all(16.0),
           child: Column(
             children: [
               TextFormField(
@@ -29,7 +29,7 @@ class _EditPageState extends State<EditPage> {
                   hintText: 'Kemayoran',
                 ),
               ),
-              SizedBox(height: 20.0,),
+              const SizedBox(height: 20.0,),
               ElevatedButton(
                 onPressed: () {},
                 child: const Text('Submit'),

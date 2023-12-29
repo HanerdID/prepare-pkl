@@ -11,9 +11,9 @@ class LoginPage extends StatelessWidget {
     return Scaffold(
         body: Center(
             child: isSmallScreen
-                ? Column(
+                ? const Column(
                     mainAxisSize: MainAxisSize.min,
-                    children: const [
+                    children: [
                       _Logo(),
                       _FormContent(),
                     ],
@@ -44,10 +44,10 @@ class _Logo extends StatelessWidget {
       mainAxisSize: MainAxisSize.min,
       children: [
         Image.asset(
-      'lib/assets/gambar1.png',
-      width: isSmallScreen ? 100 : 200,
-      height: isSmallScreen ? 100 : 200,
-    ),
+          'assets/images/gambar2.png',
+          width: isSmallScreen ? 100 : 200,
+          height: isSmallScreen ? 100 : 200,
+        ),
         Padding(
           padding: const EdgeInsets.all(16.0),
           child: Text(
@@ -175,8 +175,7 @@ class __FormContentState extends State<_FormContent> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: ((context) => HomePage(
-                            )),
+                        builder: ((context) => HomePage()),
                       ),
                     );
                   }

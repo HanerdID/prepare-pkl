@@ -1,6 +1,6 @@
 import 'package:belajar_1/editpage.dart';
-import 'package:belajar_1/loginpage.dart';
 import 'package:belajar_1/tambahdata.dart';
+import 'package:belajar_1/theme.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -15,7 +15,10 @@ class _MyWidgetState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("Home"),
+          backgroundColor: blue1,
+          elevation: 0,
+          toolbarHeight: 71,
+          title: Text('VAS', style: bungee),
         ),
         body: ListView.builder(
             itemCount: 2,
@@ -26,32 +29,32 @@ class _MyWidgetState extends State<HomePage> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: ((context) => EditPage(
+                        builder: ((context) => const EditPage(
                             )),
                       ),
                     );
                   },
                   child: ListTile(
-                    title: Text('Zaeri'),
-                    subtitle: Text('Kemayoran'),
+                    title: const Text('Zaeri'),
+                    subtitle: const Text('Kemayoran'),
                     trailing: IconButton(
                       onPressed: () {
                         showDialog(
                             context: context,
                             builder: ((context) {
                               return AlertDialog(
-                                  content: Text(
+                                  content: const Text(
                                       "Yakin ingin menghapus data Zaeri?"),
                                   actions: [
                                     ElevatedButton(
                                         onPressed: () {
                                         },
-                                        child: Text("Ya")),
+                                        child: const Text("Ya")),
                                     ElevatedButton(
                                         onPressed: () {
                                           Navigator.of(context).pop();
                                         },
-                                        child: Text("Tidak")),
+                                        child: const Text("Tidak")),
                                   ]);
                             }));
                       },
